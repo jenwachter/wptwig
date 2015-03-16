@@ -1,0 +1,15 @@
+{
+  "name": "jenwachter/wptwig",
+  "type": "wordpress-theme",
+  "version": "0.0.0",
+  "require": {
+    "twig/twig": "1.15.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "wptwig\\": [
+        "src/"
+      ]
+    }
+  }
+}
