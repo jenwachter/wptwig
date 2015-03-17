@@ -2,17 +2,8 @@
 
 namespace wptwig\Controllers;
 
-class Page
+class Page extends Base
 {
-  protected $post;
-
-  public function __construct($post)
-  {
-    $this->model = new \wptwig\Models\Page($post);
-  }
-
-  public function get()
-  {
-    return $this->model->get();
-  }
+  public $modelName = "Page";
+  public $template = "page";
 }
