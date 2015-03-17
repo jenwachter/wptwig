@@ -2,7 +2,7 @@
 
 namespace wptwig\Models;
 
-class Page extends Base
+class Post extends Base
 {
   public function __construct($post)
   {
@@ -13,7 +13,7 @@ class Page extends Base
   {
     $data = parent::get();
 
-    // modify data for pages, if needed
+    // modify data for posts, if needed
 
     return $this->forceArray($data);
   }
