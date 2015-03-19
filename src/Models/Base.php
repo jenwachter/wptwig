@@ -43,7 +43,7 @@ abstract class Base
   }
 
   /**
-   * Twig has trouble object data,
+   * Twig has trouble with object data,
    * so force the data to be an array.
    * @param mixed $data Array/object
    * @return array
