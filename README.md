@@ -43,7 +43,6 @@ Now, I'll go through all three application layers hidden in those two lines of c
 The controller's job is to fetch data and the display that data in a template. In `src/Controllers/Page.php`, two properties are defined:
 
 ```php
-<?php
 public $modelName = "Page";
 public $template = "page";
 ```
@@ -74,11 +73,9 @@ public function get()
   // modify data for pages, if needed
   $data["tags"] = wp_get_post_tags($this->post->ID);
 
-  return $this->forceArray($data);
+  return $data;
 }
 ```
-
-_Note: I've had trouble rendering object data in Twig, so `forceArray()` ensures that all data passed to Twig is comprised of arrays, no objects._
 
 
 ### View
