@@ -5,15 +5,13 @@ A WordPress starter theme that utilizes MVC structure and Twig as its template e
 
 ## Installation
 
-The preferred method of installation is to use Composer. In your WordPress project's `composer.json`, require WordPress+Twig:
+The preferred method of installation is fork this repository, then install via Composer. In your WordPress project's `composer.json`, require WordPress+Twig:
 
 ```json
 "require": {
-  "jenwachter/wptwig": "dev-master"
+  "[your_username]/wptwig": "dev-master"
 }
 ```
-
-_Note: There are no official releases of this project as of yet; therefore, dev-master is the branch to pull for now._
 
 WordPress+Twig uses [Composer Installers](https://github.com/composer/installers), which allows the theme to be installed in a location other than `/vendor`. Define this location as your WordPress themes folder:
 
@@ -36,18 +34,16 @@ $page->show();
 ```
 A page controller is instantiated and the global `$post` object is passed in as the only argument. Then the controller's `show()` method is called, rendering the template.
 
-Now, I'll go through all three application layers hidden in those two lines of code so that you can extend this starter theme as you need.
-
 ### Controller
 
-The controller's job is to fetch data and the display that data in a template. In `src/Controllers/Page.php`, two properties are defined:
+The controller's job is to fetch data and display that data in a template. In `src/Controllers/Page.php`, two properties are defined:
 
 ```php
 public $modelName = "Page";
 public $template = "page";
 ```
 
-`$modelName` defines the name of the model the controller should instantiate, found in `src/Models/{$modelName}.php`. `$template`  defines the name of the template the data should be rendered in, found in `src/Views/{$template}.twig`.
+`$modelName` defines the name of the model the controller should instantiate, found in `src/Models/{$modelName}.php`. `$template` defines the name of the template the data should be rendered in, found in `src/Views/{$template}.twig`.
 
 Additionally, the Page controller extends from the Base controller, which does several things:
 
