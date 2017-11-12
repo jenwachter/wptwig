@@ -1,6 +1,6 @@
 # Wordpress+Twig
 
-A WordPress starter theme that utilizes MVC structure and uses Twig as its template engine.
+A WordPress starter theme that utilizes MVC structure and Twig as its template engine.
 
 
 ## Installation
