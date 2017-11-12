@@ -1,7 +1,17 @@
 {
   "name": "jenwachter/wptwig",
   "type": "wordpress-theme",
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "description": "A WordPress starter theme that utilizes MVC structure and Twig as its template engine.",
+  "keywords": ["wordpress", "theme", "twig", "mvc"],
+  "homepage": "http://github.com/jenwachter/wptwig",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jen Wachter",
+      "email": "jenleighkelly@gmail.com"
+    }
+  ],
   "require": {
     "twig/twig": "1.15.*",
     "composer/installers": "~1.0"
